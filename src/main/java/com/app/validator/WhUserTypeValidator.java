@@ -36,6 +36,9 @@ public class WhUserTypeValidator implements Validator{
 				if(!StringUtils.hasText(ut.getUserFor())) {
 					errors.rejectValue("userFor", null,"enter code!!!");
 				}
+				if(!StringUtils.hasText(ut.getUserEmail())) {
+					errors.rejectValue("userEmail", null,"enter email!!!");
+				}
 				//number check
 				if(!StringUtils.hasText(ut.getUserContact())) {
 					errors.rejectValue("userContact", null,"enter contact number!!!");

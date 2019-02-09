@@ -20,7 +20,7 @@ public class ShipmentTypeValidator implements Validator{
 	public void validate(Object target, Errors errors) {
 		ShipmentType st=(ShipmentType)target;
 		//drop down checking
-		if(StringUtils.isEmpty(st.getShipmentMode())) {
+		if(!StringUtils.isEmpty(st.getShipmentMode())) {
 			errors.rejectValue("shipmentMode", null, "choose one option!!!");
 		}
 		//text checking

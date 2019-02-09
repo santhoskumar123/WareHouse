@@ -19,7 +19,7 @@ public class UomValidator implements Validator{
 	@Override
 	public void validate(Object target, Errors errors) {
 		Uom u=(Uom)target;
-		if(StringUtils.isEmpty(u.getUomType())) {
+		if(!StringUtils.isEmpty(u.getUomType())) {
 			errors.rejectValue("uomType", null, "choose one option!!!");
 		}
 

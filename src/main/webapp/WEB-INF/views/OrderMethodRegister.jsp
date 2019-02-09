@@ -53,7 +53,7 @@
 							</form:select>
 							<form:errors path="exeType" cssClass="text-danger"/>
 						</div>
-						<form:errors path="exeType" cssClass="text-danger"/>
+						
 					</div>
 					<div class="row">
 						<div class="col-4">

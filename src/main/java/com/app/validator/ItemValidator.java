@@ -20,26 +20,29 @@ public class ItemValidator implements Validator{
 	public void validate(Object target, Errors errors) {
 		Item i=(Item)target;
 		//text check
-		if(StringUtils.hasText(i.getItemCode())) {
+		if(!StringUtils.hasText(i.getItemCode())) {
 			errors.rejectValue("itemCode", null, "please enter code!!!");
 		}//pattern checking
 		else if(!Pattern.matches("[A-Z]{4,6}",i.getItemCode())){
 			errors.rejectValue("itemCode", null, "code must be 4-12 upper case letters only!!!");
 		}
 		//length checking
-		if(i.getItemLen()==null||i.getItemLen()<0.0) {
-			errors.rejectValue("itemLen", null, "Item length must be >0!!!");
+		/*if(i.getItemLen().isNaN()) {
+			errors.rejectValue("itemLen", null, "enter item length!!!");
 		}
-		/*if(i.getItemWidth()<=0) {
-			errors.rejectValue("itemLen", null, "Item width must be >0!!!");
+		else if(i.getItemLen()!=null&&i.getItemLen()<0.0) {
+			errors.rejectValue("itemLen", null, "Item Length must be >0!!!");
 		}
-		if(i.getItemHeight()<=0) {
-			errors.rejectValue("itemLen", null, "Item height must be >0!!!");
+		if(i.getItemWidth().isNaN()) {
+			errors.rejectValue("itemWidth", null, "Item width must be >0!!!");
 		}
-		if(i.getBaseCost()<=0) {
-			errors.rejectValue("itemLen", null, "base cost must be >0!!!");
-		}*/
-
+		if(i.getItemHeight().isNaN()) {
+			errors.rejectValue("itemHeight", null, "Item height must be >0!!!");
+		}
+		if(i.getBaseCost().isNaN()) {
+			errors.rejectValue("baseCost", null, "base cost must be >0!!!");
+		}
+*/
 
 		//drop down empty check
 		if(StringUtils.isEmpty(i.getBaseCurrency())) {

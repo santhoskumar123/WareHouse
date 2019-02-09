@@ -21,9 +21,9 @@
 				<form:form action="insert" method="post" modelAttribute="uom">
 					<div class="row">
 						<div class="col-4">
-							<label for="uomType" >UOM TYPE</label>
+							<label for="uomType">UOM TYPE</label>
 						</div>
-						
+
 						<div class="col-6">
 
 							<form:select path="uomType" cssClass="form-control">
@@ -32,8 +32,9 @@
 								<form:option value="NoPACKING">NoPacking</form:option>
 								<form:option value="--NA--">--Na--</form:option>
 							</form:select>
+							<form:errors path="uomType" cssClass="text-danger" />
 						</div>
-						<form:errors path="uomType" cssClass="text-danger"/>
+
 					</div>
 					<div class="row">
 						<div class="col-4">
@@ -42,8 +43,9 @@
 						<div class="col-6">
 
 							<form:input path="uomModel" cssClass="form-control" />
+							<form:errors path="uomModel" cssClass="text-danger" />
 						</div>
-						<form:errors path="uomModel" cssClass="text-danger"/>
+
 					</div>
 					<div class="row">
 						<div class="col-4">
@@ -53,8 +55,9 @@
 
 
 							<form:textarea path="uomDes" cssClass="form-control" />
+							<form:errors path="uomDes" cssClass="text-danger" />
 						</div>
-						<form:errors path="uomDes" cssClass="text-danger"/>
+
 					</div>
 					<div class="row">
 						<div class="col-4"></div>
